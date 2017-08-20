@@ -68,6 +68,14 @@ class Search extends PureComponent {
     this.shadowHeight = this.props.shadowOffsetHeightCollapsed;
   }
 
+  componentDidMount() {
+    if (this.props.initialKeyword) {
+      this.setState({
+        keyword: this.props.initialKeyword
+      });
+    }
+  }
+
   onLayout = event => {
     const contentWidth = event.nativeEvent.layout.width;
     this.contentWidth = contentWidth;
@@ -497,6 +505,7 @@ Search.propTypes = {
   editable: PropTypes.bool,
   blurOnSubmit: PropTypes.bool,
   keyboardShouldPersist: PropTypes.bool,
+  initialKeyword: PropTypes.string,
 
   /**
      * Positioning
@@ -535,7 +544,8 @@ Search.defaultProps = {
   shadowOpacityCollapsed: 0.12,
   shadowOpacityExpanded: 0.24,
   shadowRadius: 4,
-  shadowVisible: false
+  shadowVisible: false,
+  initialKeyword: ''
 };
 
 export default Search;
