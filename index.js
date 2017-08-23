@@ -398,7 +398,7 @@ const styles = {
   iconSearch: {
     flex: 1,
     position: 'absolute',
-    top: middleHeight - 7,
+    top: middleHeight - 2,
     height: 14,
     width: 14
   },
@@ -408,7 +408,7 @@ const styles = {
   iconDelete: {
     position: 'absolute',
     right: 70,
-    top: middleHeight - 7,
+    top: middleHeight - 2,
     height: 14,
     width: 14
   },
